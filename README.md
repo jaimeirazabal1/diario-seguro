@@ -2,7 +2,7 @@
 
 [English](#english) | [Español](#español)
 
-![DiarioSeguro Logo](https://via.placeholder.com/150)
+![DiarioSeguro Logo](./logo.png)
 
 ---
 
