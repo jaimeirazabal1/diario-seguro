@@ -17,7 +17,15 @@ class DiarioSeguro:
         self.root.geometry("800x600")
         self.root.resizable(True, True)
         
-        self.data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+        # Detectar si estamos en modo portable (PyInstaller) o en modo desarrollo
+        if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+            # Estamos en una aplicación empaquetada
+            base_path = os.path.dirname(sys.executable)
+            self.data_dir = os.path.join(base_path, "data")
+        else:
+            # Estamos en modo desarrollo
+            self.data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+        
         os.makedirs(self.data_dir, exist_ok=True)
         
         self.config_file = os.path.join(self.data_dir, "config.json")

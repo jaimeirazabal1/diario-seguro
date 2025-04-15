@@ -53,6 +53,20 @@ python src/main.py
 - The password is never stored directly, only its hash
 - PBKDF2 with 100,000 iterations is used to derive the encryption key
 
+### Creating a Portable Version
+
+To create a standalone portable application that runs without installing Python:
+
+1. Make sure you have Python installed
+2. Run the packaging script:
+
+```
+python build_portable.py
+```
+
+3. The executable will be created in the `dist` folder
+4. You can distribute this version - all data will be stored in the `data` folder next to the executable
+
 ### Warning
 
 Don't forget your password. If you lose it, there is no way to recover your diary entries as they are encrypted.
@@ -105,6 +119,20 @@ python src/main.py
 - Todas las entradas se cifran usando Fernet (implementación de AES-128)
 - La contraseña nunca se almacena directamente, solo su hash
 - Se usa PBKDF2 con 100,000 iteraciones para derivar la clave de cifrado
+
+### Creando una Versión Portable
+
+Para crear una aplicación portable independiente que funcione sin instalar Python:
+
+1. Asegúrate de tener Python instalado
+2. Ejecuta el script de empaquetado:
+
+```
+python build_portable.py
+```
+
+3. El ejecutable se creará en la carpeta `dist`
+4. Puedes distribuir esta versión - todos los datos se guardarán en la carpeta `data` junto al ejecutable
 
 ### Advertencia
 

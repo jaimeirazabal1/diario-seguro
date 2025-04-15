@@ -25,6 +25,18 @@ wheels/
 .installed.cfg
 *.egg
 
+# PyInstaller
+*.spec
+*.manifest
+*.manifest.xml
+*.ico
+*.icns
+*.toc
+*.pkg
+*.dmg
+*.exe
+*.msi
+
 # Entornos virtuales
 venv/
 ENV/
